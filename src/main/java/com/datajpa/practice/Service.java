@@ -3,6 +3,8 @@ package com.datajpa.practice;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Sort;
+
 public class Service {
 
     // Save trainer
@@ -18,6 +20,7 @@ public class Service {
     public void findById(FitnessRepository repo, int id) {
 
         Optional<FitnessTrainer> optional = repo.findById(id);
+       
 
         if (optional.isPresent()) {
 
